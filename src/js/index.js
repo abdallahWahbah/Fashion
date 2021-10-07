@@ -46,4 +46,33 @@ menuBtn.addEventListener("click", e=>
 
 
 ////////////////////////// 
-// 
+// Products filter
+const productButtons = document.querySelectorAll(".product__link");
+const productItems = document.querySelectorAll(".product");
+
+productButtons.forEach(btn =>
+{
+    btn.addEventListener("click", e=>
+    {
+        // colorize the link (filter)
+        productButtons.forEach(el => el.classList.remove("active"));
+        e.target.classList.add("active")
+
+        const dataFilter = e.target.dataset.filter;
+    
+        if(!dataFilter) return;
+
+        productItems.forEach(item =>
+        {
+            item.classList.remove("active");
+            item.classList.add("hide");
+
+            
+            if(item.dataset.type === dataFilter || dataFilter === "all")
+            {
+                item.classList.add("active");
+                item.classList.remove("hide");
+            }
+        });
+    }) ;
+});
