@@ -1,4 +1,7 @@
 ////////////////////////////////////////////
+// Swiper link: https://swiperjs.com/
+
+////////////////////////////////////////////
 // Mixins
 @mixin respond($break-point)
 {
@@ -434,7 +437,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
 
 
 ////////////////////////////////////////////
-// Products
+// Exclusive Products
 .product__list
 {
     display: flex;
@@ -536,4 +539,68 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
             font-size: 1.5rem;
         }
     }
+}
+
+
+
+
+
+
+////////////////////////////////////////////
+// Collection
+.section__collection
+{
+    background: $color-grey-light-1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @include respond(phone){flex-wrap: wrap;}
+}
+.collection
+{
+    &__image--container
+    {
+        width: 50rem;
+        height: auto;
+        flex: 0 1 40%;
+
+        @include respond(phone)
+        {
+            flex: 0 1 100%;
+            height: 50rem;
+            text-align: center;
+        }
+    }
+    &__image
+    {
+        width: 100%;
+        height: 100%;
+        margin-top: -10rem;
+
+        @include respond(tab-port){margin-top: -8rem;}
+    }
+
+    &__details
+    {
+        flex: 0 1 40%;
+
+        @include respond(tab-port){flex: 0 1 50%;}
+        @include respond(phone){flex: 0 1 100%; text-align: center;}
+    }
+}
+
+
+
+
+
+
+////////////////////////////////////////////
+// Features Products with slider
+.section__features__slider
+{
+    padding: 0;
+    background: blue;
+    height: 100vh;
 }
