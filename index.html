@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="src/scss/main.scss">
@@ -105,12 +105,92 @@
 
 
         <header class="header">
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide">Slide 1</div> -->
+                    <div class="swiper-slide slide__background slide__background--1">
+                        <div class="slide">
+                            <h3 class="slide__discount">Upto 50% Off</h3>
+                            <h1 class="slide__heading">Kid's Fashion</h1>
+                            <a href="#" class="btn btn--blue">Shop now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide__background slide__background--2">
+                        <div class="slide">
+                            <h3 class="slide__discount">Upto 50% Off</h3>
+                            <h1 class="slide__heading">Men's Fashion</h1>
+                            <a href="#" class="btn btn--blue">Shop now</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide__background slide__background--3">
+                        <div class="slide">
+                            <h3 class="slide__discount">Upto 50% Off</h3>
+                            <h1 class="slide__heading">Women's Fashion</h1>
+                            <a href="#" class="btn btn--blue">Shop now</a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
             
         </header>
 
 
 
 
+
+        <section class="section__products">
+            
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        });
+        </script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
         <script src="src/js/index.js"></script>
     </body>

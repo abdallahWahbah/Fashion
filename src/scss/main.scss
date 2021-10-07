@@ -16,6 +16,11 @@
     }
 }
 
+
+
+
+
+
 ////////////////////////////////////////////
 // Colors
 $color-primary: #715bf5;
@@ -32,6 +37,11 @@ $color-grey-dark-3: #333;
 
 $color-white: #fff;
 $color-black: #000;
+
+
+
+
+
 
 ////////////////////////////////////////////
 // Basic installation
@@ -65,7 +75,34 @@ body
     }
 }
 
+
+
+
+
+
+////////////////////////////////////////////
+// Reusable components
 a{text-decoration: none; color: inherit; font-weight: inherit;}
+.btn
+{
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    transition: all .2s ease-in-out;
+
+    &:hover
+    {
+        background: $color-primary-dark;
+    }
+}
+.btn--blue
+{
+    color: $color-white;
+    background: $color-primary;
+}
+
+
+
+
 
 ////////////////////////////////////////////
 // Navigation
@@ -75,13 +112,17 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
     padding-bottom: 3rem;
     box-shadow: 0 1rem 2rem rgba($color-black, .1);
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1111111111;
-    
+    background: $color-white;    
+    height: 9rem;
 
     &__container
     {
         position: relative;
+        height: 100%;
 
         display: flex;
         justify-content: space-between;
@@ -133,6 +174,8 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
             width: 100%;
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
             transition: all .2s ease-in-out;
+            background: $color-white;
+            padding: 2rem;
         }
         &.active{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
     }
@@ -144,8 +187,9 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         {
             padding: 1.5rem 0;
             display: block;
-            border-bottom: 1px solid $color-grey-light-2;
+            
             margin-right: 0 !important;
+            &:not(:last-of-type){border-bottom: 1px solid $color-grey-light-2;}
         }
     }
     &__link
@@ -195,7 +239,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         width: 35rem;
 
         &:focus{outline: none;}
-        @include respond(phone){width: 100%;}
+        @include respond(phone){width: 100%; background-color: $color-white;}
     }
 
     &__cart
@@ -205,8 +249,8 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         top: 250%;
         right: 0rem;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        background:rgba($color-black, .1);
         transition: all .2s ease-in-out;
+        background-color: $color-white;
 
         &.active{clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);}
 
@@ -239,3 +283,143 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         }
     }
 }
+
+
+
+
+
+
+////////////////////////////////////////////
+// Swiper
+.swiper 
+{
+    width: 100%;
+    height: 100%;
+}
+
+// .swiper-slide 
+// {
+//     // text-align: center;
+//     font-size: 18px;
+//     background: #fff;
+
+//     /* Center slide text vertically */
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: -webkit-flex;
+//     display: flex;
+//     -webkit-box-pack: center;
+//     -ms-flex-pack: center;
+//     -webkit-justify-content: center;
+//     justify-content: center;
+//     -webkit-box-align: center;
+//     -ms-flex-align: center;
+//     -webkit-align-items: center;
+//     align-items: center;
+// }
+
+// .swiper-slide img
+// {
+//     display: block;
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
+
+// .swiper 
+// {
+//     margin-left: auto;
+//     margin-right: auto;
+// }
+
+
+
+
+
+
+////////////////////////////////////////////
+// Header
+.header
+{
+    height: 100vh;
+    padding: 0;
+    padding-top: 9rem;
+}
+.slide__background
+{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &--1
+    {
+        background-image: url('../img/banner3.jpg');
+    }
+    &--2
+    {
+        background-image: url('../img/banner2.jpg');
+    }
+    &--3
+    {
+        background-image: url('../img/banner1.jpg');
+    }
+
+    @include respond(tab-port){background-position: left;}
+}
+.slide
+{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+
+    @include respond(tab-port)
+    {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+    &__discount
+    {
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }   
+    &__heading
+    {
+        font-size: 4.5rem;
+        color: $color-grey-dark-3;
+        margin-bottom: 3rem;
+        @include respond(phone){font-size: 4rem;}
+    }
+}
+
+.swiper-button
+{
+    &-next, &-prev
+    {
+        bottom: 3rem;
+        top: auto;
+        color: $color-grey-dark-2;
+        padding:3rem;
+        background-color: $color-white;
+        @include respond(phone){bottom: 6rem;}
+    }
+    &-prev
+    {
+        
+        left: auto;
+        right: 10rem;
+    }
+}
+
+
+
+
+
+
+////////////////////////////////////////////
+// Products
