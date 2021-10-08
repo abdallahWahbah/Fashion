@@ -116,3 +116,26 @@ var swiper = new Swiper(".product__swiper--featured", {
         },
       },
   });
+
+var swiper = new Swiper(".swiper__reviews", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+        el: ".swiper-pagination-2",
+        clickable: true,
+    },
+    breakpoints: {
+        600: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        900: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+        },
+        1200: {
+            slidesPerView: 2,
+            spaceBetween: 50,
+        },
+        },
+});
