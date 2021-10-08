@@ -76,3 +76,43 @@ productButtons.forEach(btn =>
         });
     }) ;
 });
+
+
+
+// Swiper
+var swiper = new Swiper(".header__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    },
+    navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+    },
+});
+
+var swiper = new Swiper(".product__swiper--featured", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination-2",
+      clickable: true,
+    },
+    breakpoints: {
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        900: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+  });

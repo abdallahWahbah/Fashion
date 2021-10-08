@@ -482,6 +482,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
     border-radius: .5rem;
     overflow: hidden;
     position: relative;
+    // width: 25rem !important;
 
     &.hide{display: none;}
     &.active
@@ -514,6 +515,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         & > *
         {
             background: $color-white;
+            border-radius: 1rem;
             padding: .8rem;
             font-size: 2.5rem;
             cursor: pointer;
@@ -597,10 +599,39 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
 
 
 ////////////////////////////////////////////
-// Features Products with slider
-.section__features__slider
+// Featured products with slider
+.product__swiper--featured{margin-top: 4rem;}
+.sproduct__inside
 {
-    padding: 0;
-    background: blue;
-    height: 100vh;
+    text-align: center;
+    .product__image, .product__icons
+    {
+        width: 100%;
+        @include respond(tab-land)
+        {
+            width: 70%;
+            height: 35rem;
+        }
+        @include respond(tab-port)
+        {
+            width: 70%;
+            height: 40rem;
+        }
+        @include respond(phone)
+        {
+            width: 50%;
+            height: 45rem;
+        }
+    }
+    .product__icons
+    {
+            top: 0%;
+            left: 50%;
+            transform: translate(-50%, 0%) scale(0); 
+    }
+    &:hover .product__icons
+    {
+        transform: translate(-50%, 0%) scale(1);
+    }
 }
+.swiper-pagination-2{text-align: center;}
