@@ -5,11 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="src/scss/main.scss">
+
         <title>Fashion</title>
+
     </head>
     <body>
 
@@ -25,12 +28,12 @@
                     <div class="navigation__name">Fashion</div>
                 </div>
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link">Home</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Products</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Featured</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Review</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link">Blogs</a></li>
+                    <li class="navigation__item"><a href="#header" class="navigation__link active">Home</a></li>
+                    <li class="navigation__item"><a href="#section__products" class="navigation__link">Products</a></li>
+                    <li class="navigation__item"><a href="#section__features__slider" class="navigation__link">Featured</a></li>
+                    <li class="navigation__item"><a href="#section__reviews" class="navigation__link">Review</a></li>
+                    <li class="navigation__item"><a href="#section__contact" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a href="#section__blogs__slider" class="navigation__link">Blogs</a></li>
                 </ul>
                 <div class="navigation__right__container">
                     <a href="#" class="navigation__right"><ion-icon class="navigation__icon js__navigation__icon--menu" name="menu" ></ion-icon></a>
@@ -104,7 +107,7 @@
 
 
 
-        <header class="header">
+        <header class="header js--fadeIn" id="header">
 
             <!-- Swiper -->
             <div class="swiper mySwiper header__swiper">
@@ -144,18 +147,18 @@
 
 
 
-        <section class="section__products">
-            <div class="heading__primary--container">
+        <section class="section__products" id="section__products">
+            <div class="heading__primary--container js--bounce">
                 <h1 class="heading__primary">Exclusive <span class="heading__primary--span">Products</span></h1>
             </div>
-            <ul class="product__list">
+            <ul class="product__list js--fadeInRightBig">
                 <li class="product__list--item"><a href="#" class="product__link active" data-filter="all">All</a></li>
                 <li class="product__list--item"><a href="#" class="product__link" data-filter="new">New</a></li>
                 <li class="product__list--item"><a href="#" class="product__link" data-filter="best">Best seller</a></li>
                 <li class="product__list--item"><a href="#" class="product__link" data-filter="featured">Faetured</a></li>
                 <li class="product__list--item"><a href="#" class="product__link" data-filter="special">Special offers</a></li>
             </ul>
-            <div class="products">
+            <div class="products js--fadeInUp">
                 <div class="product active" data-type="new">
                     <img src="./src/img/clothes-1.jpg" alt="Product 1" class="product__image">
                     <div class="product__icons">
@@ -357,10 +360,10 @@
 
 
         <section class="section__collection">
-            <div class="collection__image--container">
+            <div class="collection__image--container js--fadeInLeftBig">
                 <img src="./src/img/collection.png" alt="" class="collection__image">
             </div>
-            <div class="collection__details">
+            <div class="collection__details js--fadeInRightBig">
                 <h3 class="slide__discount">Upto 50% Off</h3>
                 <h1 class="slide__heading">Best summer collection</h1>
                 <a href="#" class="btn btn--blue">Shop now</a>
@@ -372,14 +375,14 @@
 
 
 
-        <section class="section__features__slider">
-            <div class="heading__primary--container">
+        <section class="section__features__slider" id="section__features__slider">
+            <div class="heading__primary--container js--bounce">
                 <h1 class="heading__primary"><span class="heading__primary--span">Featured</span> Products</h1>
             </div>
            
             <!-- Swiper -->
             <div class="swiper mySwiper product__swiper--featured">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper js--fadeInUp">
                     <div class="swiper-slide product__swiper-slide">
                         <div class="product active sproduct__inside" data-type="new">
                             <img src="./src/img/clothes-1.jpg" alt="Product 1" class="product__image">
@@ -598,13 +601,13 @@
 
 
 
-        <section class="section__reviews">
-            <div class="heading__primary--container">
+        <section class="section__reviews" id="section__reviews">
+            <div class="heading__primary--container js--bounce">
                 <h1 class="heading__primary"><span class="heading__primary--span">Clients'</span> Reviews</h1>
             </div>
 
             <!-- Swiper -->
-            <div class="swiper mySwiper swiper__reviews">
+            <div class="swiper mySwiper swiper__reviews js--fadeInRightBig">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product__swiper-slide">
                         <div class="review" data-type="new">
@@ -712,13 +715,13 @@
 
 
 
-        <section class="section__contact">
-            <div class="heading__primary--container">
+        <section class="section__contact" id="section__contact">
+            <div class="heading__primary--container js--bounce">
                 <h1 class="heading__primary"><span class="heading__primary--span">Contact</span> Us</h1>
             </div>
             <div class="contact">
                 <div class="contact__boxes">
-                    <div class="contact__box">
+                    <div class="contact__box js--fadeInLeftBig">
                         <ion-icon class="contact__icon" name="location-outline"></ion-icon>
                         <h3 class="contact__name">Address</h3>
                         <p class="contact__value">Egypt - AD Daqahliya - Met Ghamr</p>
@@ -730,7 +733,7 @@
                         <p class="contact__value">abdowahbah123@yahoo.com</p>
                         <p class="contact__value">abdowahbah@gamil.com</p>
                     </div>
-                    <div class="contact__box">
+                    <div class="contact__box js--fadeInRightBig">
                         <ion-icon class="contact__icon" name="call-outline"></ion-icon>
                         <h3 class="contact__name">Phone</h3>
                         <p class="contact__value">+201092717902</p>
@@ -738,7 +741,7 @@
                     </div>
                 </div>
                 <div class="contact__below">
-                    <form action="#" class="contact__form">
+                    <form action="#" class="contact__form js--fadeInLeftBig">
                         <div class="contact__form--label">Get in touch</div>
                         <div class="contact__input--container">
                             <input type="text" class="contact__input" placeholder="Name...">
@@ -753,7 +756,7 @@
                         </div>
                         <button class="btn btn--blue">Send a message</button>
                     </form>
-                    <iframe class="contact__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27443.22972536083!2d31.246377048582353!3d30.70704897389123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c1c2deeced23%3A0xc3b43fe0733da735!2sMit%20Ghamr%2C%20Madinet%20Mit%20Ghamr%20(Include%20Daqados)%2C%20Mit%20Ghamr%2C%20Dakahlia%20Governorate!5e0!3m2!1sen!2seg!4v1633770256841!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe class="contact__map js--fadeInRightBig" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27443.22972536083!2d31.246377048582353!3d30.70704897389123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c1c2deeced23%3A0xc3b43fe0733da735!2sMit%20Ghamr%2C%20Madinet%20Mit%20Ghamr%20(Include%20Daqados)%2C%20Mit%20Ghamr%2C%20Dakahlia%20Governorate!5e0!3m2!1sen!2seg!4v1633770256841!5m2!1sen!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>            
         </section>
@@ -763,13 +766,13 @@
 
 
 
-        <section class="section__blogs__slider">
-            <div class="heading__primary--container">
+        <section class="section__blogs__slider" id="section__blogs__slider">
+            <div class="heading__primary--container js--bounce">
                 <h1 class="heading__primary">Our <span class="heading__primary--span">Blogs</span></h1>
             </div>
            
             <!-- Swiper -->
-            <div class="swiper mySwiper blog__swiper">
+            <div class="swiper mySwiper blog__swiper js--fadeInUp">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide product__swiper-slide">
                         <div class="product" data-type="new">
@@ -952,7 +955,103 @@
 
 
         <footer class="footer">
-            
+            <div class="footer__container">
+                <div class="footer__item js--fadeInLeftBig">
+                    <div class="footer__header">About Us</div>
+                    <p class="footer__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="footer__item js--fadeInLeftBig">
+                    <div class="footer__header">Categories</div>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Men</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Women</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Kids</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Best seller</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">New arrivals</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item js--fadeInRightBig">
+                    <div class="footer__header">Quick links</div>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Home</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Products</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Featured</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Reviews</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Contact</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Blogs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item js--fadeInRightBig">
+                    <div class="footer__header">Useful links</div>
+                    <ul class="footer__list">
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">My account</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Orders</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">List</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">Sell now</a>
+                        </li>
+                        <li class="footer__list--item">
+                            <ion-icon class="footer__icon" name="arrow-forward"></ion-icon>
+                            <a href="#" class="footer__link">New Offers</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__social js--bounce">
+                <ion-icon class="footer__social--link" name="logo-facebook"></ion-icon>
+                <ion-icon class="footer__social--link" name="logo-twitter"></ion-icon>
+                <ion-icon class="footer__social--link" name="logo-instagram"></ion-icon>
+                <ion-icon class="footer__social--link" name="logo-pinterest"></ion-icon>
+                <ion-icon class="footer__social--link" name="logo-linkedin"></ion-icon>
+            </div>
+            <div class="footer__line"></div>
+            <p class="footer__copy">
+                Copyright &copy; Septenber by 
+                <span class="footer__copy--name">Abdallah Wahbah</span>
+            </p>
         </footer>
 
 
@@ -960,23 +1059,8 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!--waypoint-->
+        <script src="./src/js/noframework.waypoints.min.js"></script>
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
