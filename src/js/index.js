@@ -226,7 +226,7 @@ colorizeSection("section__blogs__slider");
 
 
 // Animations
-const animation = (el, animation, sectionOffset = "90%") =>
+const animation = (el, animation, sectionOffset = "80%") =>
 {
   var waypoint = new Waypoint({
     // element: document.querySelector(`.${sectionID}`),
