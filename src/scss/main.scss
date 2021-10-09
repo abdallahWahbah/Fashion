@@ -90,6 +90,9 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
 {
     padding: 1rem 2rem;
     font-size: 1.4rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
     transition: all .2s ease-in-out;
 
     &:hover
@@ -224,7 +227,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
     &__form
     {
         position: absolute;
-        top: -250%;
+        top: -350%;
         right: 0rem;
         transition: all .2s ease-in-out;
 
@@ -252,6 +255,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         border-radius: .5rem;
         margin-right: -3rem;
         width: 35rem;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
         &:focus{outline: none;}
         @include respond(phone){width: 100%;}
@@ -422,6 +426,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
         padding:3rem;
         background-color: $color-white;
         @include respond(phone){bottom: 6rem;}
+        box-shadow: 0 1rem 2rem rgba($color-black, .1);
     }
     &-prev
     {
@@ -478,7 +483,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
 {
     margin-bottom: 2rem;
     box-shadow: 0 1rem 2rem rgba($color-black, .1);
-    border: 2px solid $color-grey-light-2;
+    // border: 2px solid $color-grey-light-2;
     border-radius: .5rem;
     overflow: hidden;
     position: relative;
@@ -598,7 +603,7 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
 
 ////////////////////////////////////////////
 // Featured products with slider
-.product__swiper--featured{margin-top: 4rem;}
+.product__swiper--featured, .blog__swiper{margin-top: 4rem;}
 .sproduct__inside
 {
     text-align: center;
@@ -693,3 +698,228 @@ a{text-decoration: none; color: inherit; font-weight: inherit;}
     }
 }
 .swiper__reviews .swiper-pagination-2{margin-top: 4rem;}
+
+
+
+
+
+
+////////////////////////////////////////////
+// Contact
+.contact
+{
+    &__boxes
+    {
+        margin-top: 5rem;
+
+        display: flex;
+        justify-content: space-between;
+        
+        @include respond(tab-port)
+        {
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+    &__box
+    {
+        padding: 2rem 5rem;
+        border: 2px solid $color-grey-light-2;
+        border-radius: .5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        flex: 0 1 32%;
+        
+        @include respond(tab-port){flex: 0 1 49%; padding: 2rem 4rem;}
+        @include respond(phone){flex: 100%; padding: 2rem;}
+    }
+    &__icon
+    {
+        font-size: 2rem;
+        border-radius: 50%;
+        padding: 1rem;
+        border: 2px solid $color-grey-light-2;
+        margin-bottom: 1rem;
+    }
+    &__name
+    {
+        font-size: 1.7rem;
+        color: $color-grey-dark-3;
+        margin-bottom: 1rem;
+    }
+    &__value
+    {
+        font-size: 1.4rem;
+        font-weight: 400;
+        &:not(:last-of-type){margin-bottom: 1rem;}
+    }
+
+    // inputs & map
+    &__below
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+    &__form
+    {
+        padding: 1rem;
+        border: 2px solid $color-grey-light-2;
+        border-radius: .5rem;
+        flex: 1 1 42rem;
+        align-self: flex-start;
+
+        &--label
+        {
+            font-size: 2.5rem;
+            font-weight:700;
+            color: $color-grey-dark-3;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }
+    }
+    &__input--container
+    {
+        margin-bottom: 2rem;
+
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        @include respond(phone){flex-wrap: wrap;}
+    }
+    &__input, &__input--textarea
+    {
+        border: none;
+        border: 1px solid $color-grey-light-2;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        color: inherit;
+        font-weight: inherit;
+        border-radius: 5px;
+
+        &:focus{outline: none;}
+    }
+    &__input
+    {
+        flex: 0 1 49%;
+
+        @include respond(phone){flex: 0 1 100%;}
+    }
+    &__input--textarea
+    {
+        width: 100%;
+        height: 15rem;
+        margin-bottom: 2rem;
+    }
+    &__map
+    {
+        
+        flex: 1 1 42rem;
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid $color-grey-light-2 !important;
+        border-radius: .5rem;
+    }
+    .btn{margin-bottom: 1rem;}
+}
+
+
+
+
+
+
+////////////////////////////////////////////
+// Blogs
+.section__blogs__slider
+{
+    background: $color-grey-light-1;
+
+
+    .product
+    {
+        text-align: left;
+        border: 1px solid $color-grey-light-2;
+
+        & > *:not(:first-child)
+        {
+            margin: 0 1.5rem 1.5rem 1.5rem;
+        }
+
+        &__image--container
+        {
+            width: 100%;
+            height: 30rem;
+
+            @include respond(tab-port){height: 43rem}
+            @include respond(phone){height: 45rem;}
+        }
+        &__image
+        {
+            width: 100%;
+            height: 100%;
+        }
+        &__title
+        {
+            margin-top: 1.5rem !important;
+            font-size: 1.6rem;
+            color: $color-grey-dark-3;
+        }
+        &__paragraph
+        {
+            font-size: 1.3rem;
+            line-height: 170%;
+        }
+        &__line
+        {
+            height: 2px;
+            background-color:$color-grey-light-2;
+        }
+        &__below
+        {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__date--container
+        {
+            display: flex;
+            align-items: center;
+        }
+        &__icon
+        {
+            font-size: 1.3rem;
+            color:$color-primary;
+            margin-right: .5rem;
+        }
+        &__date
+        {
+            font-size: 1.3rem;
+        }
+    }
+
+
+
+
+    .swiper-button
+    {
+        &-next, &-prev
+        {
+            bottom: 3rem;
+            top: 50%;
+            color: $color-grey-dark-2;
+            padding:4rem;
+            background-color: $color-white;
+            transform: scale(.6) translateY(-50%);
+            opacity: 1 !important;
+
+            @include respond(phone){bottom: 6rem;}
+        }
+        &-prev
+        {
+            left: 0;
+            right: 10rem;
+        }
+    }
+}

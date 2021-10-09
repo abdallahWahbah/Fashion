@@ -79,7 +79,7 @@ productButtons.forEach(btn =>
 
 
 
-// Swiper
+// Swipers
 var swiper = new Swiper(".header__swiper", {
     slidesPerView: 1,
     spaceBetween: 30,
@@ -139,3 +139,31 @@ var swiper = new Swiper(".swiper__reviews", {
         },
         },
 });
+
+
+var swiper = new Swiper(".blog__swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination-2",
+      clickable: true,
+    },
+    breakpoints: {
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        900: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+  });
